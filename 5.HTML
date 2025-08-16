@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link href="allcss.css">
+<style>
+     *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        }
+     .header{
+            height: 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            justify-content: space-between;
+            box-shadow:var(100px) ;
+            padding: 2%;
+            background:  rgb(25, 156, 216);
+            z-index: 10;
+        }
+        .logo img{
+            margin-top: 10px;
+            height: 90%;
+            width: 90%;
+            display: inline-block;
+        }
+        .nav{
+            transform: translateX(-16%);
+        }
+        .nav a{
+            color: white;
+            font-size: 6 cap;
+            border-radius:20px;
+            padding: 50px; 
+        }
+        .nav a:hover{
+            color: yellow;
+            background: rgb(25, 156, 216);
+        }
+        .atc {
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            color:rgb(25, 156, 216);;
+            border-radius: 20px ;
+            border-color: white;
+            background: white;
+            transform: translateX(-24%);
+        }
+        .a{float: none;
+            transform: translateY(+159px);
+            position: relative;
+            background-color: white;
+            color: orange;
+            height: 100%;
+            width: 80%;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 40px;
+            padding-top: 0%;
+            padding-left:10% ;
+            font-size: 20px;
+            justify-content: space-between;
+            
+        }
+        .b{
+            height: 30%;
+            width: 60%;
+            justify-content: space-between;
+            transform: translateX(+36%);
+            background-color: rgb(25, 156, 216);
+            color: white;
+            padding: 10%;
+            border-radius: 20px;
+            transform: translateX(+11%);
+            border: 1px solid black;
+
+        }
+        .b input,
+        .b select{
+            float: right;
+            border-radius: 20px;
+        }
+        .b input,
+        .b select:hover{
+            color: red;
+            font-weight: 600;
+        }
+        .atc {
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            color:rgb(25, 156, 216);;
+            border-radius: 20px ;
+            border-color: white;
+            background: white;
+            align-self: center;
+        }
+        .atca{
+            transform: translateX(+105%) translateY(+170%);
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            color:rgb(25, 156, 216);;
+            border-radius: 20px ;
+            border-color: white;
+            background: white;
+            align-self: center;
+        }
+</style>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo"><img src="1.JPG"></a>
+        <nav class="nav">
+            <a href="2.HTML">HOME</a>
+            <a href="3.HTML">MEDICINE</a>
+            <a href="4.HTML">DOCTORS</a>
+        </nav>
+        <form action="index.HTML">
+        <button class="atc">LOGOUT</button>
+        </form>
+    </header>
+    <div class="a">
+    <h1>Address and personal details:</h1>
+    <hr>
+    <p></p><p></p>
+    <form action="6.HTML" onsubmit="return validateForm()">
+        <div class="b">
+    Name:<input type="text" id="name" placeholder="Enter your name." required><br><br>
+    Phone:<input type="tel" id="phone" placeholder="Enter your phone number" required><br><br>
+    E-mail:<input type="email" id="email" placeholder="Enter your E-mail id" required><br><br>
+    House no./Street no./Lane no.:<input type="text"><br><br>
+    Area/Locality:<input type="text"><br><br>
+    Pin code:<input type="number"><br><br>
+    City:<select>
+        <option>--Choose your city--</option>
+        <option>Bengaluru</option>
+        <option>Mysuru</option>
+        <option>Tumkuru</option>
+        <option>Manguluru</option>
+    </select>
+    <br><br>
+    Mode of payment:<select>
+        <option>COD</option>
+        <option>Card/Net Banking</option>
+        <option>UPI</option>
+    </select>
+    <button class="atca" onclick=>PLACE ORDER</button></div>
+    </form>
+</div>
+<script>
+function validateForm() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const city = document.getElementById('city').value;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (email !== "" && !email.match(emailPattern)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            const phonePattern = /^\d{10}$/;
+            if (!phone.match(phonePattern)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return false;
+            }
+            if (name === "" || city === "") {
+                alert('Please fill in all required fields.');
+                return false;
+            }
+
+            return true;
+            alert('Your order is placed and is being dispatched shortly.');
+        }
+</script>
+</body>
+</html>

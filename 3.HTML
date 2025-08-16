@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine</title>
+    <link href="allcss.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+     *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        }
+     .header{
+            height: 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            justify-content: space-between;
+            box-shadow:var(100px) ;
+            padding: 2%;
+            background: rgb(25, 156, 216);
+            z-index: 10;
+        }
+        .logo img{
+            margin-top: 10px;
+            height: 90%;
+            width: 90%;
+            display: inline-block;
+        }
+        .nav{
+            transform: translateX(-15%);
+        }
+        .nav a{
+            color: white;
+            font-size: 6 cap;
+            border-radius:20px;
+            padding: 50px; 
+        }
+        .nav a:hover{
+            color: yellow;
+            background: rgb(25, 156, 216);
+        }
+        .a{
+            margin-top: 1150px;
+            display:flex;
+            justify-content:center ;
+            align-items: center;
+            height: 100vh;
+        }
+        .b{
+            padding-block: 5rem;
+        }
+        .c{
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .d{
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .e{
+            position: relative;
+            background-color: rgb(25, 156, 216);
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+        .h{
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 0;
+            border: 1px solid black;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        .f{
+            background-size:cover ;
+            width: 300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 5;
+        }
+        .btn {
+            width: 100%;
+            height: 45px;
+            background: rgb(25, 156, 216);
+            border: none;
+            outline: none;
+            border-radius: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+        }
+        .btn:hover{
+            opacity: 0.8;
+            color: orange;
+        }
+        .atc {
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            color:rgb(25, 156, 216);;
+            border-radius: 20px ;
+            border-color: white;
+            background: white;
+            transform: translateX(-24%);
+        }
+        .modal {
+            display: none;
+        }
+        .mystyle{
+            display: block;
+            position: fixed;
+            z-index: 15; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%; 
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4); 
+            }
+            .modal-content {
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid black;
+            width: 51%;
+            height:33%;
+            }
+            .btna {
+            width:24%;
+            height: 42px;
+            background: rgb(25, 156, 216);
+            border: none;
+            outline: none;
+            border-radius: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 12px;
+            color: white;
+            font-weight: 600;
+        }
+        .btnatc{
+            width: 100%;
+            height: 45px;
+            background: orange;
+            border: none;
+            outline: none;
+            border-radius: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+        }
+        .btnatc:hover{
+            opacity: 0.8;
+            color: rgb(25, 156, 216);
+        }
+</style>
+<script>
+    function mod(){
+        var a=confirm('Do you want to confirm your order?')
+        if(a==true){
+        alert('Click OK to view your bill.');
+        var element = document.getElementById("myModala");
+        element.classList.toggle("mystyle");}
+        else{
+            alert('Your order was cancelled. Enjoy your shopping!')
+        }
+    }
+    function moda(){
+        var b=confirm('Do you want to confirm your order?')
+        if(b==true){
+            alert('Click OK to view your bill.');
+        var element = document.getElementById("myModalb");
+        element.classList.toggle("mystyle");}
+        else{
+            alert('Your order was cancelled. Enjoy your shopping!')
+        }
+    }
+    function modb(){
+        var c=confirm('Do you want to confirm your order?')
+        if(c==true){
+            alert('Click OK to view your bill.');
+        var element = document.getElementById("myModalc");
+        element.classList.toggle("mystyle");}
+        else{
+            alert('Your order was cancelled. Enjoy your shopping!')
+        }
+    }
+    function modc(){
+        var d=confirm('Do you want to confirm your order?')
+        if(d==true){
+            alert('Click OK to view your bill.');
+        var element = document.getElementById("myModald");
+        element.classList.toggle("mystyle");}
+        else{
+            alert('Your order was cancelled. Enjoy your shopping!')
+        };
+    }
+    function modd(){
+        var e=confirm('Do you want to confirm your order?')
+        if(e==true){
+            alert('Click OK to view your bill.');
+        var element = document.getElementById("myModale");
+        element.classList.toggle("mystyle");}
+        else{
+            alert('Your order was cancelled. Enjoy your shopping!')
+        }
+    }
+    function mode(){
+        var f=confirm('Do you want to confirm your order?')
+        if(f==true){
+            alert('Click OK to view your bill.');
+        var element = document.getElementById("myModalf");
+        element.classList.toggle("mystyle");}
+        else{
+            alert('Your order was cancelled. Enjoy your shopping!')
+        }
+    }
+    function atc(){
+        alert('Item added to cart!!!');
+    }
+</script>
+</head>
+<body>
+      <div id="myModala" class="modal">
+        <div class="modal-content">
+            <div id="close" style="text-align: center;">
+            <p><h2><U>RECEIPT:</U></h2></p>
+            <p></p>
+            <table align="center" border="1px solid black" style="size: 24px; width: 420px;">
+              <tr>
+              <td><b>Name of the product:</b></td>
+              <td>PARACETAMOL</td>
+              </tr>
+              <tr>
+              <td><b>Cost of the product:</b></td>
+              <td>10 Rs.</td>
+              </tr>
+          </table>
+          <p><p></p></p>
+          <form action="5.HTML">
+          <button class="btna">CHECKOUT</button>        <button class="btna" onclick="alert('Your bill has been downloaded!!!')"><i class='bx bxs-download'></i>DOWNLOAD BILL</button>
+          </form> 
+          </div>
+          </div>
+        </div>
+      <div id="myModalb" class="modal">
+        <div class="modal-content">
+          <div id="close" style="text-align: center;">
+          <p><h2><U>RECEIPT:</U></h2></p>
+          <p></p>
+          <table align="center" border="1px solid black" style="size: 24px; width: 420px;">
+            <tr>
+            <td><b>Name of the product:</b></td>
+            <td>CLINDAMYCIN</td>
+            </tr>
+            <tr>
+            <td><b>Cost of the product:</b></td>
+            <td>60 Rs.</td>
+            </tr>
+        </table>
+        <p><p></p></p>
+        <form action="5.HTML">
+        <button class="btna">CHECKOUT</button>        <button class="btna" onclick="alert('Your bill has been downloaded!!!')"><i class='bx bxs-download'></i>DOWNLOAD BILL</button>
+        </form> 
+        </div>
+        </div>
+      </div>
+      <div id="myModalc" class="modal">
+        <div class="modal-content">
+            <div id="close" style="text-align: center;">
+            <p><h2><U>RECEIPT:</U></h2></p>
+            <p></p>
+            <table align="center" border="1px solid black" style="size: 24px; width: 420px;">
+              <tr>
+              <td><b>Name of the product:</b></td>
+              <td>VITAMIN D TABLETS</td>
+              </tr>
+              <tr>
+              <td><b>Cost of the product:</b></td>
+              <td>150 Rs.</td>
+              </tr>
+          </table>
+          <p><p></p></p>
+          <form action="5.HTML">
+          <button class="btna">CHECKOUT</button>        <button class="btna" onclick="alert('Your bill has been downloaded!!!')"><i class='bx bxs-download'></i>DOWNLOAD BILL</button>
+          </form> 
+          </div>
+          </div>
+        </div>
+      <div id="myModald" class="modal">
+        <div class="modal-content">
+            <div id="close" style="text-align: center;">
+            <p><h2><U>RECEIPT:</U></h2></p>
+            <p></p>
+            <table align="center" border="1px solid black" style="size: 24px; width: 420px;">
+              <tr>
+              <td><b>Name of the product:</b></td>
+              <td>IBUPROFEN 800MG</td>
+              </tr>
+              <tr>
+              <td><b>Cost of the product:</b></td>
+              <td>60 Rs.</td>
+              </tr>
+          </table>
+          <p><p></p></p>
+          <form action="5.HTML">
+          <button class="btna">CHECKOUT</button>        <button class="btna" onclick="alert('Your bill has been downloaded!!!')"><i class='bx bxs-download'></i>DOWNLOAD BILL</button>
+          </form> 
+          </div>
+          </div>
+        </div>
+      <div id="myModale" class="modal">
+        <div class="modal-content">
+            <div id="close" style="text-align: center;">
+            <p><h2><U>RECEIPT:</U></h2></p>
+            <p></p>
+            <table align="center" border="1px solid black" style="size: 24px; width: 420px;">
+              <tr>
+              <td><b>Name of the product:</b></td>
+              <td>CALPOL 500</td>
+              </tr>
+              <tr>
+              <td><b>Cost of the product:</b></td>
+              <td>25 Rs.</td>
+              </tr>
+          </table>
+          <p><p></p></p>
+          <form action="5.HTML">
+          <button class="btna">CHECKOUT</button>        <button class="btna" onclick="alert('Your bill has been downloaded!!!')"><i class='bx bxs-download'></i>DOWNLOAD BILL</button>
+          </form> 
+          </div>
+          </div>
+        </div>
+        <div id="myModalf" class="modal">
+        <div class="modal-content">
+            <div id="close" style="text-align: center;">
+            <p><h2><U>RECEIPT:</U></h2></p>
+            <p></p>
+            <table align="center" border="1px solid black" style="size: 24px; width: 420px;">
+              <tr>
+              <td><b>Name of the product:</b></td>
+              <td>VICKS ACTION 500</td>
+              </tr>
+              <tr>
+              <td><b>Cost of the product:</b></td>
+              <td>10 Rs.</td>
+              </tr>
+          </table>
+          <p><p></p></p>
+          <form action="5.HTML">
+          <button class="btna">CHECKOUT</button>        <button class="btna" onclick="alert('Your bill has been downloaded!!!')"><i class='bx bxs-download'></i>DOWNLOAD BILL</button>
+          </form> 
+          </div>
+          </div>
+        </div>
+    <header class="header">
+        <a href="" class="logo"><img src="1.JPG"></a>
+        <nav class="nav">
+            <a href="2.HTML">HOME</a>
+            <a href="3.HTML" style="color: orange;">MEDICINE</a>
+            <a href="4.HTML">DOCTORS</a>
+            </a>
+        </nav>
+        <form action="index.HTML">
+        <button class="atc">LOGOUT</button></form>
+      </header>  
+      <div style="transform: translateY(+83%);">
+      <div class="a">
+        <div class="b">
+            <div class="c">
+                <div>
+                    <div style="width: 33.3%; left: 0;">
+                    <div class="d">
+                        <div class="e">
+                            <img src="13.jpeg" class="f">
+                            <div class="h">
+                                <h3>PARACETAMOL</h3>
+                                <h3>10 Rs./Sheet</h3>
+                                <p>It is a medicine used to treat mild to moderate pain.</p>
+                                <button class="btn" onclick="mod()" >BUY NOW</button>
+                                <br><br>
+                                <button class="btnatc" onclick="atc()">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d">
+                        <div class="e">
+                            <img src="9.jpeg" class="f">
+                            <div class="g">
+                            </div>
+                            <div class="h">
+                                <h3>CLINDAMYCIN</h3>
+                                <h3>60 Rs./Sheet</h3>
+                                <p class="desc">It is an antibiotic that fights bacteria in the body. </p>
+                                <button class="btn" onclick="moda()">BUY NOW</button>
+                                <br><br>
+                                <button class="btnatc" onclick="atc()">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="d">
+                        <div class="e">
+                            <img src="8.jpg" class="f">
+                            <div class="g">
+                            </div>
+                            <div class="h">
+                                <h3 >VITAMIN D TABLETS</h3>
+                                <h3>150 Rs./Pack</h3>
+                                <p class="desc">It is essential for bone strength and may support the immune system and other functions. </p>
+                                <button class="btn" onclick="modb()">BUY NOW</button>
+                                <br><br>
+                                <button class="btnatc" onclick="atc()">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d">
+                        <div class="e">
+                            <img src="12.jpeg" class="f">
+                            <div class="g">
+                            </div>
+                            <div class="h">
+                                <h3>IBUPROFEN 800MG</h3>
+                                <h3>60 Rs./Bottle</h3>
+                                <p class="desc">It is used to relieve pain from various conditions such as headache, dental pain.</p>
+                                <button class="btn" onclick="modc()">BUY NOW</button>
+                                <br><br>
+                                <button class="btnatc" onclick="atc()">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                    <div class="d">
+                        <div class="e">
+                            <img src="10.jpg" class="f">
+                            <div class="g">
+                            </div>
+                            <div class="h">
+                                <h3>CALPOL 500</h3>
+                                <h3>25 Rs./Sheet</h3>
+                                <p class="desc">It is used in the treatment of Pain relief,Fever.</p>
+                                <button class="btn" onclick="modd()">BUY NOW</button>
+                                <br><br>
+                                <button class="btnatc" onclick="atc()">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d">
+                        <div class="e">
+                            <img src="11.jpg" class="f">
+                            <div class="g">
+                            </div>
+                            <div class="h">
+                                <h3>VICKS ACTION 500</h3>
+                                <h3>10 Rs./Pc</h3>
+                                <p class="desc">It is helpful in relieving the symptoms of cold such as body ache, headache, fatigue, fever.</p>
+                                <button class="btn" onclick="mode()">BUY NOW</button>
+                                <br><br>
+                                <button class="btnatc" onclick="atc()">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

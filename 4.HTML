@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors</title>
+    <link href="allcss.css">
+<style>
+     *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        }
+     .header{
+            height: 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            justify-content: space-between;
+            box-shadow:var(100px) ;
+            padding: 2%;
+            background:  rgb(25, 156, 216);
+            z-index: 10;
+        }
+        .logo img{
+            margin-top: 10px;
+            height: 90%;
+            width: 90%;
+            display: inline-block;
+        }
+        .nav{
+            transform: translateX(-15%);
+        }
+        .nav a{
+            color: white;
+            font-size: 6 cap;
+            border-radius:20px;
+            padding: 50px; 
+        }
+        .nav a:hover{
+            color: yellow;
+            background: rgb(25, 156, 216);
+        }
+        .a{
+            transform: translateY(+800px);
+            display:flex;
+            justify-content:center ;
+            align-items: center;
+            height: 100vh;
+        }
+        .b{
+            padding-block: 5rem;
+            margin-bottom: 750px;
+        }
+        .c{
+            margin-inline: 1.75rem;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .d{
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .e{
+            position: relative;
+            background-color: rgb(25, 156, 216);
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+        .h{
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 0;
+            border: 1px solid black;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        .f{
+            background-size:cover ;
+            width: 300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 5;
+        }
+        .btn {
+            width: 100%;
+            height: 45px;
+            background: rgb(25, 156, 216);
+            border: none;
+            outline: none;
+            border-radius: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+        }
+        .btn:hover{
+            opacity: 0.8;
+            color: orange;
+        }
+        .atc {
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            color:rgb(25, 156, 216);;
+            border-radius: 20px ;
+            border-color: white;
+            background: white;
+            transform: translateX(-24%);
+        }
+</style>
+<script>
+    function nit(){
+        alert("Your appointment with Dr.Nithin is confirmed. Please contact +91 98869****5 to confirm the timings.");
+    }
+    function muk(){
+        alert("Your appointment with Dr.Mukesh is confirmed. Please contact +91 98869****5 to confirm the timings.");
+    }
+    function mal(){
+        alert("Your appointment with Dr.Mala is confirmed. Please contact +91 98869****5 to confirm the timings.");
+    }
+</script>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo"><img src="1.JPG"></a>
+        <nav class="nav">
+            <a href="2.HTML">HOME</a>
+            <a href="3.HTML">MEDICINE</a>
+            <a href="4.HTML" style="color: orange;">DOCTORS</a>
+        </nav>
+        <form action="index.HTML">
+        <button class="atc">LOGOUT</button></form>
+    </header>
+    <div>
+        <div class="a" style="transform: translateY(+123%);">
+          <div class="b">
+              <div class="c">
+                  <div>
+                    <div class="d">
+                        <div class="e">
+                            <img src="14.png" class="f">
+                            <div class="h">
+                                <h3>Dr.NITHIN.P.V<br>(M.B.B.S,M.D.)</h3>
+                                <p>He is a proficient pediatrician with specialization in infant care with over 10 years of experience in the same.</p>
+                                <button class="btn" onclick="nit()">MAKE APPOINTMENT</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="d">
+                          <div class="e">
+                              <img src="14.png" class="f">
+                              <div class="h">
+                                  <h3>Dr.MUKESH.M.T<br>(M.B.B.S,M.D.)</h3>
+                                  <p>He is a reknowned cardiologist and an expert surgeon with over 20 years of experience.</p>
+                                  <button class="btn" onclick="muk()">MAKE APPOINTMENT</button>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="d">
+                            <div class="e">
+                                <img src="14.png" class="f">
+                                <div class="h">
+                                    <h3>Dr.MUNNA BHAI(M.B.B.S,M.D,M.S)</h3>
+                                    <p>He is a famous neurologist and has performed several critical operations in his career</p>
+                                    <button class="btn" onclick="mal()">MAKE APPOINTMENT</button>
+                                </div>
+                            </div>
+                          </div>
+                </div>
+</body>
+</html>

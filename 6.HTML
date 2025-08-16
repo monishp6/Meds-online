@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THANK YOU PAGE</title>
+    <link href="allcss.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    *{
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+       }
+    .header{
+           height: 100px;
+           position: fixed;
+           top: 0;
+           left: 0;
+           right: 0;
+           display: flex;
+           align-items: center;
+           border: 1px solid;
+           justify-content: space-between;
+           box-shadow:var(100px) ;
+           padding: 2%;
+           background:  rgb(25, 156, 216);
+           z-index: 10;
+       }
+       .logo img{
+           margin-top: 10px;
+           height: 90%;
+           width: 90%;
+           display: inline-block;
+       }
+       .nav{
+           transform: translateX(-16%);
+       }
+       .nav a{
+           color: white;
+           font-size: 6 cap;
+           border-radius:20px;
+           padding: 50px; 
+       }
+       .nav a:hover{
+           color: yellow;
+           background: rgb(25, 156, 216);
+       }
+       .atc {
+           padding: 10px;
+           text-align: center;
+           font-size: 15px;
+           color:rgb(25, 156, 216);;
+           border-radius: 20px ;
+           border-color: white;
+           background: white;
+           transform: translateX(-24%);
+       }
+       .a{float: none;
+            transform: translateY(+159px);
+            position: relative;
+            background-color: white;
+            color: rgb(95, 238, 39);
+            height: 100%;
+            width: 80%;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 40px;
+            padding-top: 0%;
+            padding-left:10% ;
+            font-size: 20px;
+            justify-content: space-between;
+            
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 150px;;
+            background-color: rgb(25, 156, 216);
+            border: 1px solid black;
+            color: white;
+            text-align: center;
+        }
+        .fa {
+            padding: 10px;
+            font-size: 16px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+        .fa-insta{
+            background: rgb(207, 57, 114);
+            color: white;
+        }
+        .btna {
+            width:24%;
+            height: 42px;
+            background: rgb(25, 156, 216);
+            border: none;
+            outline: none;
+            border-radius: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 12px;
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+    <script>
+        function shop(){
+            alert('You are being redirected to MEDICINES page.');
+            open('3.HTML');
+        }
+    </script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="" class="logo"><img src="1.JPG"></a>
+            <nav class="nav">
+                <a href="2.HTML">HOME</a>
+                <a href="3.HTML">MEDICINE</a>
+                <a href="4.HTML">DOCTORS</a>
+            </nav>
+            <form action="1.HTML">
+            <button class="atc">LOGOUT</button>
+            </form>
+        </header>
+        <div class="a">
+            <h1 style="color: orange;">Thanks for choosing MEDSONLINE!!!</h1>
+            <h3 style="transform: translateX(+3%);"><i class='bx bx-check-square'></i>Your order has been accepted and will be dispatched soon.<br>
+                <i class='bx bx-check-square'></i>Your order will be delivered within 30 mins.</h3>
+            <p></p><p></p>
+            <div style="transform: translateX(+15%) translateY(+123%);">
+            <button class="btna"><i class='bx bx-navigation'></i> SHARE ABOUT US</button>
+            <button class="btna" onclick="shop()">CONTINUE SHOPPING</button>
+            <button class="btna"><i class='bx bx-phone'></i>CALL HELPLINE</button>
+        </div>
+        </div> 
+        <div class="footer">
+            <p>Check us out on:</p><P></P><p></p>
+            <p><a href="facebook.com" class="fa fa-facebook"><i class='bx bxl-meta'></i></a>
+                <a href="twitter.com" class="fa fa-twitter"><i class='bx bxl-twitter'></i></a>
+                <a href="youtube.com" class="fa fa-youtube"><i class='bx bxl-youtube'></i></a>
+                <a href="instagram.com" class="fa fa-insta"><i class='bx bxl-instagram'></i></a>
+            </p><p></p><p><p><p></p></p></p>
+            <p style="font-size: 12px;"><a href="2.HTML" style="color: orange;">medsonline.com</a></p>
+        </div>
+    </body>
+    </html>
